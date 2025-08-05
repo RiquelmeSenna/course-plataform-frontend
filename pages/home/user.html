@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="../../css/user.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <button class="explore">Explore</button>
+            <h1 class="logo">Swift Cursos</h1>
+            <nav>
+                <ul>
+                    <li><a href="../home/initial.html">Início</a></li>
+                    <li><a href="../home/about.html">Sobre</a></li>
+                    <li id="create-course" style="display: none;"><a href="../creates/create-course.html">Criar
+                            Curso</a></li>
+                </ul>
+            </nav>
+            <div id="user">
+                <img src="../../images/user-svgrepo-com.svg" alt="">
+                <p>Nome do usuario</p>
+            </div>
+            <img id="logout" src="../../images/exit-svgrepo-com (1).svg">
+        </div>
+    </header>
+    <div class="categories">
+        <ul>
+        </ul>
+    </div>
+    <main class="user-profile-container">
+        <section class="user-profile">
+            <form id="user-profile-form">
+                <div class="profile-image-section">
+                    <label for="profile-image-input">
+                        <img id="profile-image" src="../../images/user-svgrepo-com.svg" alt="Foto do usuário"
+                            class="profile-img-editable">
+                        <input type="file" id="profile-image-input" accept="image/*" style="display: none;">
+                        <span class="edit-image-btn">Editar Foto</span>
+                    </label>
+                </div>
+                <div class="profile-info-section">
+                    <div class="form-group">
+                        <label>Nome:</label>
+                        <span id="user-name-text">Nome do usuario</span>
+                        <input type="text" id="user-name-input" name="user-name" value="Nome do usuario"
+                            style="display:none;">
+                        <p class="error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>CPF:</label>
+                        <span id="user-cpf-text">000.000.000-00</span>
+                        <input type="text" id="user-cpf-input" name="user-cpf" value="000.000.000-00"
+                            style="display:none;">
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <span id="user-email-text">usuario@email.com</span>
+                        <input type="email" id="user-email-input" name="user-email" value="usuario@email.com"
+                            style="display:none;">
+                    </div>
+                    <div class="form-group">
+                        <label>Senha:</label>
+                        <span id="user-password-text">********</span>
+                        <input type="password" id="user-password-input" name="user-password" value=""
+                            style="display:none;">
+                        <p class="error"></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de usuário:</label>
+                        <span id="user-type-text">Estudante</span>
+                        <select id="user-type-input" name="user-type" style="display:none;">
+                            <option value="Student">Estudante</option>
+                            <option value="Teacher">Professor</option>
+                        </select>
+                    </div>
+                    <button type="button" id="edit-btn" class="edit-btn">Editar</button>
+                    <button type="submit" id="save-btn" class="save-btn">Salvar
+                        Alterações</button>
+                    <button type="button" id="cancel-btn" class="cancel-btn">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="../../js/user.js"></script>
+
+</html>

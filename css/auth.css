@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* From Uiverse.io by mihocsaszilard */
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/pegasus-client.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+main {
+    height: 75%;
+    width: 25%;
+    border-radius: 10%;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px #888;
+}
+
+main #box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+    width: 100%;
+    height: 100%;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    width: 100%;
+}
+
+#inputs input {
+    margin-top: 6%;
+    border-radius: 6px;
+    border: 0px;
+    background-color: rgba(0, 73, 136, 0.8);
+    color: #ccc;
+    padding: 7px;
+    outline: 0;
+}
+
+#inputs input::placeholder {
+    color: #ccc;
+}
+
+.error {
+    color: rgb(248, 81, 81);
+    font-size: 11px;
+    margin-left: 2px;
+    display: none;
+}
+
+main div img {
+    width: 4.5em;
+    height: 4.5em;
+    border: 1px solid #3baef1;
+    padding: 0.5em;
+    border-radius: 50%;
+}
+
+.type {
+    display: flex;
+    color: white;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#choice-type {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    height: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 60px;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+
+.types {
+    background-color: #ccc;
+    border: 1px solid #334;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    height: 14px;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+#login {
+    margin-left: 70px;
+}
+
+#login,
+#register {
+    align-self: self-end;
+    margin-top: 0.3em;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 0.67;
+}
+
+#btn-register,
+#btn-login {
+    margin-top: 15%;
+    width: 100%;
+    height: 3.4em;
+    border-radius: 12px;
+    background: linear-gradient(to left, #002251, #1281bb);
+    border: 0px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+#box button:hover {
+    scale: 1.05;
+    background: linear-gradient(to left, #1281bb, #002251);
+    cursor: pointer;
+
+}
+
+@media screen and (min-width : 1920px) {
+    .categories {
+        margin-left: 330px;
+    }
+}

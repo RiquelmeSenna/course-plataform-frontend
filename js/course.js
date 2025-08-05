@@ -12,7 +12,7 @@ userDiv.addEventListener('click', () => {
 })
 
 async function changeName() {
-    const url = 'http://localhost:4000/users/me'
+    const url = 'https://course-plataform-backend.onrender.com/users/me'
 
     const user = await fetch(url, {
         headers: {
@@ -31,7 +31,7 @@ async function changeName() {
 
 
 async function addCategories() {
-    const url = 'https://plataforma-de-curso.onrender.com/categories'
+    const url = 'https://course-plataform-backend.onrender.com/categories'
 
     const categories = await fetch(url)
 
@@ -42,7 +42,7 @@ async function addCategories() {
         list.append(item.name)
         categoriesList.appendChild(list)
         list.addEventListener('click', async () => {
-            const url = `https://plataforma-de-curso.onrender.com/categories/find/${list.innerHTML}`
+            const url = `https://course-plataform-backend.onrender.com/categories/find/${list.innerHTML}`
 
             const category = await fetch(url)
 
@@ -82,7 +82,7 @@ logout.addEventListener('click', () => {
 
 async function courseInfo() {
     const courseId = localStorage.getItem('idCourse')
-    const url = `https://plataforma-de-curso.onrender.com/courses/${courseId}`
+    const url = `https://course-plataform-backend.onrender.com/courses/${courseId}`
 
     const course = await fetch(url)
     const response = await course.json()
@@ -131,7 +131,7 @@ let matriculationButton = document.querySelector('.enroll-btn')
 matriculationButton.addEventListener('click', async () => {
     const courseId = localStorage.getItem('idCourse')
 
-    let url = 'https://plataforma-de-curso.onrender.com/enrollments'
+    let url = 'https://course-plataform-backend.onrender.com/enrollments'
 
     const enrollment = await fetch(url, {
         method: 'POST',

@@ -3,7 +3,7 @@ let passwordInput = document.getElementsByName('password')[0]
 let buttonLogin = document.querySelector('#btn-login')
 
 buttonLogin.addEventListener('click', async () => {
-    let url = 'https://plataforma-de-curso.onrender.com/auth/signin'
+    let url = 'https://course-plataform-backend.onrender.com/auth/signin'
 
     let dadosDoUsuario = {
         email: emailInput.value,

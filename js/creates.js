@@ -12,7 +12,7 @@ userDiv.addEventListener('click', () => {
 })
 
 async function changeName() {
-    const url = 'https://plataforma-de-curso.onrender.com/users/me'
+    const url = 'https://course-plataform-backend.onrender.com/users/me'
 
     const user = await fetch(url, {
         headers: {
@@ -32,7 +32,7 @@ async function changeName() {
 
 async function addCategories() {
     // Categorias Header
-    const url = 'https://plataforma-de-curso.onrender.com/categories'
+    const url = 'https://course-plataform-backend.onrender.com/categories'
 
     const categories = await fetch(url)
 
@@ -43,7 +43,7 @@ async function addCategories() {
         list.append(item.name)
         categoriesList.appendChild(list)
         list.addEventListener('click', async () => {
-            const url = `https://plataforma-de-curso.onrender.com/categories/find/${list.innerHTML}`
+            const url = `https://course-plataform-backend.onrender.com/categories/find/${list.innerHTML}`
 
             const category = await fetch(url)
 
@@ -94,7 +94,7 @@ logout.addEventListener('click', () => {
 
 buttonCreate.addEventListener('click', async (e) => {
     e.preventDefault()
-    const urlPost = 'https://plataforma-de-curso.onrender.com/courses'
+    const urlPost = 'https://course-plataform-backend.onrender.com/courses'
 
 
     let courseTitle = document.querySelector('#course-title')
@@ -102,7 +102,7 @@ buttonCreate.addEventListener('click', async (e) => {
     let courseCategory = document.querySelector('#course-category')
     let coursePrice = document.querySelector('#course-price')
 
-    const urlCategory = `https://plataforma-de-curso.onrender.com/categories/find/${courseCategory.value}`
+    const urlCategory = `https://course-plataform-backend.onrender.com/categories/find/${courseCategory.value}`
 
     const category = await fetch(urlCategory)
     const responseCategory = await category.json()

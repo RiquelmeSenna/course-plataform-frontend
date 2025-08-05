@@ -12,7 +12,7 @@ userDiv.addEventListener('click', () => {
 })
 
 async function changeName() {
-    const url = 'https://plataforma-de-curso.onrender.com/users/me'
+    const url = 'https://course-plataform-backend.onrender.com/users/me'
 
     const user = await fetch(url, {
         headers: {
@@ -31,7 +31,7 @@ async function changeName() {
 }
 
 async function addCategories() {
-    const url = 'https://plataforma-de-curso.onrender.com/categories'
+    const url = 'https://course-plataform-backend.onrender.com/categories'
 
     const categories = await fetch(url)
 
@@ -42,7 +42,7 @@ async function addCategories() {
         list.append(item.name)
         categoriesList.appendChild(list)
         list.addEventListener('click', async () => {
-            const url = `https://plataforma-de-curso.onrender.com/categories/find/${list.innerHTML}`
+            const url = `https://course-plataform-backend.onrender.com/categories/find/${list.innerHTML}`
 
             const category = await fetch(url)
 

@@ -12,7 +12,7 @@ let profileImage = document.querySelector('#profile-image')
 
 
 async function changeName() {
-    const url = 'https://plataforma-de-curso.onrender.com/users/me'
+    const url = 'https://course-plataform-backend.onrender.com/users/me'
 
     const user = await fetch(url, {
         headers: {
@@ -31,7 +31,7 @@ async function changeName() {
 }
 
 async function addCategories() {
-    const url = 'https://plataforma-de-curso.onrender.com/categories'
+    const url = 'https://course-plataform-backend.onrender.com/categories'
 
     const categories = await fetch(url)
 
@@ -42,7 +42,7 @@ async function addCategories() {
         list.append(item.name)
         categoriesList.appendChild(list)
         list.addEventListener('click', async () => {
-            const url = `https://plataforma-de-curso.onrender.com/categories/find/${list.innerHTML}`
+            const url = `https://course-plataform-backend.onrender.com/categories/find/${list.innerHTML}`
 
             const category = await fetch(url)
 
@@ -78,7 +78,7 @@ let passwordText = document.querySelector('#user-password-text')
 let type = document.querySelector('#user-type-text')
 
 async function addUser() {
-    const url = "https://plataforma-de-curso.onrender.com/users/me"
+    const url = "https://course-plataform-backend.onrender.com/users/me"
 
     const user = await fetch(url, {
         headers: {
@@ -95,7 +95,7 @@ async function addUser() {
     type.innerHTML = response.user.type
 
     if (response.user.profileImage) {
-        profileImage.src = `https://plataforma-de-curso.onrender.com/${response.user.profileImage}`
+        profileImage.src = `https://course-plataform-backend.onrender.com/${response.user.profileImage}`
         console.log(profileImage.src)
     } else {
         profileImage.src = '../../images/user-svgrepo-com.svg'
@@ -110,7 +110,7 @@ imageInput.addEventListener('change', async () => {
     const formData = new FormData()
     formData.append('image', file)
 
-    const response = await fetch('https://plataforma-de-curso.onrender.com/users/me/photo', {
+    const response = await fetch('https://course-plataform-backend.onrender.com/users/me/photo', {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -121,7 +121,7 @@ imageInput.addEventListener('change', async () => {
     const result = await response.json()
 
     if (response.ok) {
-        profileImage.src = `https://plataforma-de-curso.onrender.com/${result.imagePath}`
+        profileImage.src = `https://course-plataform-backend.onrender.com/${result.imagePath}`
 
     } else {
         alert('Erro ao enviar imagem')
@@ -173,7 +173,7 @@ cancelBtn.addEventListener('click', () => {
 
 saveBtn.addEventListener('click', async (e) => {
     e.preventDefault()
-    const url = "https://plataforma-de-curso.onrender.com/users/me"
+    const url = "https://course-plataform-backend.onrender.com/users/me"
 
     const data = {
         name: inputName.value,

@@ -30,7 +30,7 @@ button.addEventListener('click', async () => {
         let error = document.querySelectorAll('.error')
 
         if (response.user) {
-            window.location.replace('../auth/login.html')
+            window.location.replace('../index.html')
         } else if (response.error.password) {
             error[3].style.display = 'block'
             error[3].innerHTML = response.error.password[0]

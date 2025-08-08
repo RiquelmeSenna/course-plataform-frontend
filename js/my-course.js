@@ -9,7 +9,7 @@ let teacherPanel = document.querySelector("#teacher-panel")
 let logout = document.querySelector('#logout')
 
 userDiv.addEventListener('click', () => {
-    window.location.replace('../../pages/home/user.html')
+    window.location.replace('../home/user.html')
 })
 
 async function changeName() {
@@ -90,7 +90,7 @@ categoriesDiv.addEventListener('mouseout', () => {
 
 logout.addEventListener('click', () => {
     localStorage.removeItem('token')
-    window.location.replace('../../pages/auth/login.html')
+    window.location.replace('../index.html')
 })
 
 
@@ -352,7 +352,7 @@ async function courseInfoStudent() {
 
         button.addEventListener('click', () => {
             localStorage.setItem('idCourse', item.course.id)
-            window.location.replace('../../pages/course/general.html')
+            window.location.replace('../course/general.html')
         })
     })
 

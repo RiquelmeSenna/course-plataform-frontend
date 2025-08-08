@@ -98,7 +98,7 @@ async function addUser() {
         profileImage.src = `https://course-plataform-backend.onrender.com/${response.user.profileImage}`
         console.log(profileImage.src)
     } else {
-        profileImage.src = '../../images/user-svgrepo-com.svg'
+        profileImage.src = '../images/user-svgrepo-com.svg'
     }
 }
 
@@ -130,7 +130,7 @@ imageInput.addEventListener('change', async () => {
 
 logout.addEventListener('click', () => {
     localStorage.removeItem('token')
-    window.location.replace('../../pages/auth/login.html')
+    window.location.replace('../index.html')
 })
 
 

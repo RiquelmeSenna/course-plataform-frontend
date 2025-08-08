@@ -8,7 +8,7 @@ let logout = document.querySelector('#logout')
 
 
 userDiv.addEventListener('click', () => {
-    window.location.replace('../../pages/home/user.html')
+    window.location.replace('../home/user.html')
 })
 
 async function changeName() {
@@ -93,7 +93,7 @@ async function addCategory() {
         let li = document.createElement('li')
 
         let img = document.createElement('img')
-        img.src = '../../images/Fundo Azul Liso Papel de Parede Para Download Gratuito - Pngtree..png'
+        img.src = '../images/Fundo Azul Liso Papel de Parede Para Download Gratuito - Pngtree..png'
 
         // Div de texto
         let divLi = document.createElement('div')
@@ -149,7 +149,7 @@ async function addCategory() {
 
 logout.addEventListener('click', () => {
     localStorage.removeItem('token')
-    window.location.replace('../../pages/auth/login.html')
+    window.location.replace('../index.html')
 })
 
 addCategory()
